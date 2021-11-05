@@ -1,4 +1,6 @@
-import {Modal} from './Modal'
+import React from 'react'
+import {UncontrolModal} from './UncontrolModal'
+import {ControlModal} from './ControlModal'
 import {SmallPersonListItem} from './people/SmallPersonListItem'
 import {LargePersonListItem} from './people/LargePersonListItem'
 import {SmallProductListItem} from './products/SmallProductListItem'
@@ -50,10 +52,16 @@ const products = [
 ]
 
 function App() {
+  const [showModal, setShowModal] = React.useState(false)
+
+  const handleShowModal = () => {
+    setShowModal(!showModal)
+  }
+
   return (
     <>
-      <Modal>
-        <h1>Hello Inside Modal</h1>
+      <UncontrolModal>
+        <h1>Hello Inside UncontrolModal</h1>
         <RegularList
           items={people}
           resourceName="person"
@@ -77,8 +85,11 @@ function App() {
           resourceName="product"
           itemComponent={LargeProductListItem}
         />
-      </Modal>
+      </UncontrolModal>
       <hr></hr>
+      <ControlModal isOpen={showModal} setIsOpen={handleShowModal}>
+        <h1>Hello Inside ControlModal</h1>
+      </ControlModal>
     </>
   )
 }

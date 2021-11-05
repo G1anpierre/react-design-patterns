@@ -23,18 +23,20 @@ const ModalBody = styled.div`
 // stop propagation react event
 const stopPropagation = e => e.stopPropagation()
 
-export const Modal = ({children}) => {
+export const UncontrolModal = ({children}) => {
   const [isOpen, setIsOpen] = React.useState(false)
 
   return (
     <>
-      <button onClick={() => setIsOpen(true)}>Open Modal</button>
+      <button onClick={() => setIsOpen(true)}>Open UncontrolModal</button>
       {isOpen && (
         <ModalBackground onClick={() => setIsOpen(false)}>
           <ModalBody onClick={stopPropagation}>
-            <h1>Modal</h1>
+            <h1>UncontrolModal</h1>
             {children}
-            <button onClick={() => setIsOpen(false)}>Close Modal</button>
+            <button onClick={() => setIsOpen(false)}>
+              Close UncontrolModal
+            </button>
           </ModalBody>
         </ModalBackground>
       )}
