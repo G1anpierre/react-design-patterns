@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import {UncontrolledForm} from './UncontrolledForm'
+import {ControlledForm} from './ControlledForm'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Your code goes here</h1>
+      <h3>Uncontrolled Form</h3>
+      <UncontrolledForm />
+      <hr></hr>
+      <h3>Controlled Form</h3>
+      <ControlledForm />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
