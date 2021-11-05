@@ -35,9 +35,6 @@ export const ControlModal = ({isOpen, children, setIsOpen}) => {
           </ModalBody>
         </ModalBackground>
       )}
-      <button onClick={setIsOpen}>
-        {isOpen ? 'Close controlModal' : 'Open controlModal'}
-      </button>
     </>
   )
 }

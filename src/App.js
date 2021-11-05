@@ -90,6 +90,9 @@ function App() {
       <ControlModal isOpen={showModal} setIsOpen={handleShowModal}>
         <h1>Hello Inside ControlModal</h1>
       </ControlModal>
+      <button onClick={handleShowModal}>
+        {showModal ? 'Close controlModal' : 'Open controlModal'}
+      </button>
     </>
   )
 }
