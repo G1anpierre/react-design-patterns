@@ -1,11 +1,9 @@
 import './App.css'
-import {DangerButton, BigSuccessButton} from './Button'
 
 function App() {
   return (
     <div className="App">
-      <DangerButton text="Danger Button" />
-      <BigSuccessButton text="Big Success Button" />
+      <h1>Hello React Design patterns</h1>
     </div>
   )
 }
